@@ -1,4 +1,3 @@
 # README 
-根据《JavaScript高级程序设计》（第3版）进行的对JavaScript学习
-贴着自己平时练手的demo
-从《JavaScript高级程序设计》(以下简称《高程》)第三章开始学习。
+## 1
+根据自己实际情况进行js基础学习
