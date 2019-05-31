@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/pink.css">
+</head>
+<body>
+    <div id="box">
+        <input type="button" value="pink">
+        <input type="button" value="skyblue">
+        <input type="button" value="black">
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        var isLink = document.getElementsByTagName('link')[0];
+        var isInput = document.getElementsByTagName('input');
+        var isAtt = ['pink','skyblue','black'];
+        var replace = function (state) {
+            isLink.href = 'css/' + state +'.css'
+        }
+        for (var i = 0; i<isInput.length; i++) {
+            isInput[i].index = [i];
+            isInput[i].onclick = function () {
+                this.index == isInput.length - 1;
+                replace(isAtt[this.index]);
+            }
+        }
+    }
+
+
+
+
+</script>
+</html>

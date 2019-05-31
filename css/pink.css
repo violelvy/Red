@@ -1,0 +1,7 @@
+#box {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: rgb(116, 79, 87);
+}

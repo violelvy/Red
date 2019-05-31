@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .chooseBox {
+            text-align: center;
+        }
+        input {
+			width: 50px;
+			height: 30px;
+			background: rgb(24, 141, 125);
+			color: #FFFFFF;
+			border: none;
+			font-weight: bold;
+		}
+        .change {
+            width: 100px;
+			height: 100px;
+			background: rgb(161, 125, 47);
+			margin: 20px auto;
+        } 
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="chooseBox">
+            <input type="button" value="width">
+            <input type="button" value="height">
+            <input type="button" value="background">
+            <input type="button" value="conceal">
+            <input type="button" value="reset">
+        </div>
+        <div class="change"></div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        var changeStyle = function (element, attribute,value) {
+            element.style[attribute] = value
+        }
+        var isButton = document.getElementsByTagName('input');
+        var isDiv = document.getElementsByClassName('change')[0];
+        var isAtt = ["width","height","background","display","display"];
+        var isVal = ["300px","300px","pink","none","block"];
+        for (var i = 0; i < isButton.length; i++) {
+            isButton[i].index = i;
+            isButton[i].onclick = function() {
+                this.index == isButton.length -1 && (isDiv.style.cssText = '');
+                changeStyle(isDiv,isAtt[this.index],isVal[this.index]) 
+            }
+        }
+    }
+</script>
+</html>
