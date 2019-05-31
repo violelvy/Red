@@ -78,3 +78,6 @@ a.filter( item=>{
     return item.subType === "6"
     console.log("dsdsdsd",a)
 })
+
+
+// 使用filter不会改变原数组，必须设置一个变量
