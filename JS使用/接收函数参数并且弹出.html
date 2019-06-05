@@ -34,11 +34,13 @@
     window.onload = function() {
         var isInput = document.getElementsByTagName("input");
         var isButton = document.getElementById("arguments");
+        function change (a,b) {
+            alert(a.value);
+            alert(b.value);
+        }
         for (let i = 0; i < isInput.length; i++) {
-            // isInput[i] = i;
             isButton.onclick = function () {
-                alert(isInput[0].value);
-                alert(isInput[1].value);
+                change(isInput[0],isInput[1])
             }
         }
     }

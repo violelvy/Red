@@ -28,11 +28,46 @@
     window.onload = function(){
         var isBox = document.getElementsByClassName("box")[0];
         isBox.onmouseover = function(){
+
             isBox.className = "boxChange";
         }
         isBox.onmouseout = function(){
             isBox.className = "box";
         }
     }
+
+   /*
+    鼠标事件汇总
+   
+   */
+   /*
+    mousedown:鼠标按钮被按下（左键或者右键）时触发。不能通过键盘触发。
+
+    mouseup:鼠标按钮被释放弹起时触发。不能通过键盘触发。
+
+    click:单击鼠标左键或者按下回车键时触发。这点对确保易访问性很重要，意味着onclick事件处理程序既可以通过键盘也可以通过鼠标执行。
+
+    dblclick:双击鼠标左键时触发。
+
+    mouseover:鼠标移入目标元素上方。鼠标移到其后代元素上时会触发。
+
+    mouseout:鼠标移出目标元素上方。
+
+    mouseenter:鼠标移入元素范围内触发，该事件不冒泡，即鼠标移到其后代元素上时不会触发。
+
+    mouseleave:鼠标移出元素范围时触发，该事件不冒泡，即鼠标移到其后代元素时不会触发。
+    
+    mousemove:鼠标在元素内部移到时不断触发。不能通过键盘触发。
+   
+   attention：：
+   
+    在一个元素上相继触发mousedown和mouseup事件，才会触发click事件。两次click事件相继触发才会触发dblclick事件。
+
+    如果取消 了mousedown或mouseup中的一个，click事件就不会被触发。直接或间接取消了click事件，dblclick事件就不会被触发了。
+   */
+
+
+   
+
 </script>
 </html>
