@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>变色~~~~</title>
+    <style>
+        .bigBox {
+            width: 620px;
+            margin: 0 auto;
+        }
+        .boxChild {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background: #e7dd85;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            width: 90px;
+            height: 25px;
+            background: rgb(182, 42, 158);
+            color: #ffffff;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="bigBox">
+        <div class="boxChild"></div>
+        <div class="boxChild"></div>
+        <div class="boxChild"></div>
+        <button>改变颜色</button>
+    </div>
+</body>
+<script>
+    window.onload = function() {
+        var isDiv = document.getElementsByClassName("boxChild");
+        var isButton = document.getElementsByTagName("button")[0];
+        isButton.onclick = function() {
+            for (var i = 0; i < isDiv.length; i++) {
+                isDiv[i].style.backgroundColor = "red"
+            }
+        }
+    }
+</script>
+</html>
