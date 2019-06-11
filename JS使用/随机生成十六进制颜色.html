@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>随机数创建十六进制颜色值</title>
+    <style>
+        #box {
+           width: 300px;
+           height: 300px;
+           margin: 0 auto;
+           text-align:center;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #F5DEB3;
+            margin: 10px auto;
+        }
+        .choose{
+            width: 100px;
+            height: 20px;
+            background-color: #1E90FF;
+            margin: 10px auto;
+            color: #ffffff;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="box"></div>
+        <div class="choose" onclick="changeColor()">改变颜色</div>
+    </div>
+</body>
+<script type="text/javascript">
+    function changeColor () {
+        var a,b = [], c = "#";
+        for( var i = 0; i < 6; i++) {
+            a = Math.ceil(Math.random()*16).toString(16).toLocaleUpperCase(); 
+            b[i] = a;
+            c += b[i];
+        }
+        c = c.substr(0,7);
+        document.querySelector(".box").style.backgroundColor = c;
+        console.log(c);
+    }
+    /*
+      Math.random() *16     获取1-16的随机整数。
+      toString()            将随机值转化为字符串类型
+      Math.ceil()           执行的是向上取整计算，返回的是大于或者等于函数参数，并且与之相近的整数
+      toLocaleUpperCase()   将字符串转化为大写字母
+      substr(start,length)  在字符串中抽取start下标开始的指定数目的字符，
+                            start必须存在，要抽取子串的起始下标，必须为数值
+                            length 可选，子串中的字符数，必须是数值
+    
+    
+    
+    */
+
+   
+</script>
+</html>
