@@ -36,6 +36,7 @@
     </div>
 </body>
 <script type="text/javascript">
+    //第一种方法
     function changeColor () {
         var a,b = [], c = "#";
         for( var i = 0; i < 6; i++) {
@@ -55,10 +56,18 @@
       substr(start,length)  在字符串中抽取start下标开始的指定数目的字符，
                             start必须存在，要抽取子串的起始下标，必须为数值
                             length 可选，子串中的字符数，必须是数值
-    
-    
-    
     */
+    //第二种方法
+    // function changeColor () {
+    //     var a = "#";
+    //     var b = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"];
+    //     for (let i = 0; i < 6; i++) {
+    //         c = parseInt(Math.random() * 16);
+    //         a += b[c];
+    //     }
+    //     console.log(a)
+    //     document.querySelector(".box").style.backgroundColor = a
+    // }
 
    
 </script>
