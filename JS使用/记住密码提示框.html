@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>记住密码提示框</title>
+    <style>
+        #bigBox {
+           width: 300px;
+           height: 400px;
+           margin: 0 auto;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+        }
+        .hideBox{
+            width: 300px;
+            height: 50px;
+            background-color: yellow;
+            position: absolute;
+            visibility: hidden;
+            top: 30px;
+            border: 1px green solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="bigBox">
+        <div class="box" onmouseover="showCheckBox()" onmouseout="hideBox()">
+            <input type="checkbox" id="checkbox">
+            <span>两周内自动登录</span>
+        </div>
+        <div id="hideBox" class="hideBox">为了您的信息安全，请不要在网吧或公用电脑上使用此功能</div>
+    </div>
+</body>
+<script type="text/javascript">
+    function showCheckBox () {
+       var isDiv = document.getElementById("hideBox");
+       isDiv.style.visibility = "visible"
+    };
+    function hideBox () {
+       var isDiv = document.getElementById("hideBox");
+       isDiv.style.visibility = "hidden"
+    };
+   
+</script>
+</html>
