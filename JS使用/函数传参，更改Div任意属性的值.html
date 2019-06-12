@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数传参，更改Div任意属性的值</title>
+    <style>
+        #box {
+            width: 300px;
+            margin: 0 auto;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 10px 0;
+        }
+        label {
+            width: 5em;
+            display: inline-block;
+            text-align: right;
+            font-size: 12px;
+        }
+        input {
+            padding: 5px;
+            border: 1px #000 solid;
+        }
+        #div {
+            color: #fff;
+            width: 180px;
+            height: 100px;
+            background-color: pink;
+            margin: 0 auto;
+            padding: 10px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p>
+            <label>属性名称</label>
+            <input type="text" value="width">
+        </p>
+        <p>
+            <label>属性值</label>
+            <input type="text" value="width">
+        </p>
+        <!-- 第一种方法  -->
+        <p>
+            <label></label>
+            <button>确定</button>
+            <button>重置</button>
+        </p>
+        <!-- 第二种方法  -->
+        <p>
+            <label></label>
+            <button onclick="sure()">确定</button>
+            <button onclick="cancel()">重置</button>
+        </p>
+    </div>
+</body>
+<script type="text/javascript">
+    //第一种方法
+    //window.onloading = function () {
+    //    function changeStyle (e,name,value) {
+    //        e.style[name] = value;
+    //    }
+    //    var isDiv = document.getElementById("div");
+    //    var isBth = document.getElementsByTagName("button");
+    //    var isInput = document.getElementsByTagName("input");
+    //    isBtn[0].onclick = function () {
+    //        changeStyle(isDiv,isInput[0].value,isIpnt[1].value)
+    //    };
+    //    isBtn[1].onclick = function () {
+    //        isDiv.removeAttribute("style")
+    //    }
+    //}
+    //以后找工作一定找一个有外网的，要不然自己一个一个在网页上敲，快炸了！
+    //这破公司外网还要权限，还不能下载上传，只能看
+    //我哭辽。说好的面向百度编程现在只能面向之前项目编程
+    
+    
+    
+    
+    //第二种方法
+    var isDiv = document.getElementById("div");
+    var isBth = document.getElementsByTagName("button");
+    var isInput = document.getElementsByTagName("input");
+    function sure () {
+        isDiv.style[isInput[0].value] = isInput[1].value;
+    }
+    function cancel () {
+        isDiv.removeAttribute("style")
+    }
+</script>
+</html>
