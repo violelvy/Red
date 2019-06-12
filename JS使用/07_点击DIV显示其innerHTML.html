@@ -23,7 +23,7 @@
 </body>
 <script type="text/javascript">
     window.onload = function () {
-        var isDiv = document.getElementById("box").getElementByTagName("p");
+        var isDiv = document.getElementById("box").getElementsByTagName("p");
         for ( var i =0; i < isDiv.length; i++) {
             isDiv[1].onclick = function () {
                 console.log(this.innerHTML)
