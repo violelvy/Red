@@ -50,7 +50,16 @@
     }
     /*
       Math.random() *16     获取1-16的随机整数。
-      toString()            将随机值转化为字符串类型
+      toString(radix)       radix可选。规定表示数字的基数，使 2 ~ 36 之间的整数。
+                            若省略该参数，则使用基数 10。但是要注意，如果该参数是 10 以外的其他值，则 ECMAScript 标准允许实现返回任意值。
+                            （W3school）
+                            
+      js任意进制转换--        parseInt与toString
+      
+      parseInt(str,radix); 将字符串str按照radix进制编码方式转换为10进制返回，没有radix，默认为10； 此方法把任意进制字符串转为10进展返回。
+                           (选参数是操作数的进制说明，不是目标的进制)
+                           eg: parseInt(“010”,16)就是16进制的结果：16
+                            
       Math.ceil()           执行的是向上取整计算，返回的是大于或者等于函数参数，并且与之相近的整数
       toLocaleUpperCase()   将字符串转化为大写字母
       substr(start,length)  在字符串中抽取start下标开始的指定数目的字符，
