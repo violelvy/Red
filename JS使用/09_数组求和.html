@@ -6,32 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>数组求和</title>
     <style>
-        input {
-            width: 300px;
-            height: 25px;
-            display: block;
-            margin: 20px auto;
+        #box {
+            width: 600px;
+            margin: 0 auto;
         }
-       
+        #box input {
+            padding: 3px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            font-family: inherit;
+            width: 220px;
+            margin-right: 20px;
+        }
+        #box span {
+            font-size: 12px;
+        }
+        .sum {
+            font-size: 24px;
+            color: pink;
+        }
     </style>
 </head>
 
 <body>
-    <input type="button" value="数组求和" onclick="arraySum()">
+    <div id="box">
+        <lable>
+            <input type="text" value="1,2,3,4,5,6,7,8,9,10" id="input" onkeyup="change()">
+            <span>输入数字求和，数字之间用半角","号分隔</span>
+        </lable>
+        <p>
+            <button onclick="sum()">求和</button>
+        </p>
+        <strong class="sum" id="sum"></strong>
+    </div>
 </body>
 <script type="text/javascript">
-    function arraySum () {
-        var arr = [1,2,3,4,5,6,7,8,9];
-        var sum = 0;
-        //第一种方法  for循环
-        for (var i = 0; i < arr.length; i++) {
-            sum += arr[i]
-        };
-        //第二种  forEach（）
-        arr.forEach (ele => {
-            sum += ele
-        });
-        console.log(sum)
+    var isInput = document.getElementById("input");
+    var isStrong = document.getElementById("sum");
+    function change () {
+        isInput.value = isInput.value.replace(/[^(\d)|(,)]/,"");
     }
+    function sum () {
+        var arraySum = isInput.value.split(",");
+        var newArray = arraySum.map(Number);
+        var sum = newArray.reduce(function(x,y) {
+           return x + y 
+        },0);
+        isStrong.innerHTML = sum
 </script> 
 </html>
