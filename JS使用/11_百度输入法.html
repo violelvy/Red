@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组求和</title>
+    <style>
+        body,ul,li {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style-type: none;
+        }
+        button {
+            cursor: pointer;
+        }
+        #box {
+            width: 700px;
+            margin: 10px auto;
+        }
+        #list {
+            background: #fff;
+            border: 1px solid pink;
+            margin-top: 5px;
+            display: none;
+        }
+        #list li {
+            line-height: 24px;
+            display: block;
+        }
+        #close {
+            border-top: 1px solid pink;
+        }
+        #list li a {
+            color: purple;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 12px;
+        }
+        #list li a:hover {
+            background: #b9b378;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <button onclick="change()">输入法</button>
+        <ul id="list">
+            <li>
+                <a herf="#">手写</a>
+            </li>
+            <li>
+                <a herf="#">拼音</a>
+            </li>
+            <li>
+                <a herf="#" id="close" onclick="close1()">关闭</a>
+            </li>
+    </div>
+</body>
+<script type="text/javascript">
+    var isInput = document.getElementById("list").style;
+    function change () {
+      style.display = style.display == "block" ? "none" : "block"
+    };
+    function close1 () {
+      style.display = "none"
+    }
+</script> 
+</html>
