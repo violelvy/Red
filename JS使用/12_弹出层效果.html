@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>弹出层效果</title>
+    <style>
+        body,div,h3 {
+           margin: 0;
+           padding: 0;
+        }
+        #button {
+            width: 600px;
+            margin: 0 auto;
+        }
+        #button,button {
+            text-align: center;
+        }
+        #layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100;
+            background-color: #000;
+            opacity: 0.6;
+            display: none;
+        }
+        #center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 200px;
+            background-color: #fff;
+            border: 3px solid #6e3b53;
+            margin: -120px 0 0 -203px;
+            display: none;
+        }
+        h3 {
+            font-size: 12px;
+            text-align: center;
+            background-color: pink;
+            border-bottom: 3px solid #6e3b53;
+            padding: 3px;
+        }
+        h3 span {
+            cursor: pointer;
+            color: #6e3b53;
+            border: 1px solid #6e3b53;
+            background-color: #fff;
+            width: 15px;
+            height: 15px;
+            line-height: 15px;
+            display: inline-block;
+            text-align: center;
+            margin-left: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div id="button">
+        <button onclick="ball()">弹出弹框</button>
+    </div>
+    <div id="layer"></div>
+    <div id="center">
+        <h3 onclick="close_Box()">
+            <span>×</span>
+        </h3>
+    </div>
+</body>
+<script type="text/javascript">
+    var isDiv = document.getElementById("layer");
+    var isCenter = document.getElementById("center");
+    
+    function ball () {
+        isDiv.style.display = "block";
+        isCenter.style.display = "block";
+    };
+    function close_Box () {
+        isDiv.style.display = "none";
+        isCenter.style.display = "none";
+    };
+</script>
+</html>
