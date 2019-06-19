@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>累计自身加一</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        input {
+            font-size: 12px;
+            cursor: pointer;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="0" onkeyup="add()" id="one">
+</body>
+<script type="text/javascript">
+    var isBtn = document.getElementById("one");
+    var i = 0;
+    function add () {
+         isBtn.value = ++i;
+         console.log(i);
+    }
+    /*
+      自增、自减运算符是单目运算符，可以放在操作元之前，也可以放在操作元之后。
+      操作元必须是一个整型或浮点型变量。
+      放在操作元前面的自增、自减运算符，会先将变量的值加1（减1），然后再使该变量参与表达式的运算；
+      放在操作元后面的自增、自减运算符，会先使变量参与表达式的运算，然后再将该变量加1（减1）。
+      简单来说：i++返回的是自增之前的值，++i返回的是自增后的值。//自减同理。
+    */
+</script> 
+</html>
