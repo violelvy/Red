@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鼠标移入/移出改变图片透明度</title>
+    <style>
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        #pic_list {
+            width: 700px;
+            overflow: hidden;
+            zoom: 1;
+            border: 1px solid rgb(82, 28, 28);
+            margin: 0 auto;
+            padding: 0 0 10px 10px;
+        }
+
+        #pic_list li {
+            float: left;
+            width: 128px;
+            height: 128px;
+            border: 1px solid #ccc;
+            margin: 10px 10px 0 0;
+        }
+
+        #pic_list li img {
+            width: 128px;
+            height: 128px;
+            float: left;
+            opacity: 0.3;
+            cursor: crosshair;
+            filter: alpha(opacity=30);
+        }
+
+        #pic_list li.open img {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="pic_list">
+        <li>
+            <img src="./images/01.JPG" alt="">
+        </li>
+        <li>
+            <img src="./images/02.JPG" alt="">
+        </li>
+        <li>
+            <img src="./images/03.jpeg" alt="">
+        </li>
+        <li>
+            <img src="./images/04.JPG" alt="">
+        </li>
+        <li>
+            <img src="./images/05.JPG" alt="">
+        </li>
+        <li>
+            <img src="./images/06.JPG" alt="">
+        </li>
+        <li>
+            <img src="./images/07.JPG" alt="">
+        </li>
+        <li>
+            <img src="./images/08.JPG" alt="">
+        </li>
+        <li>
+            <img src="./images/09.JPG" alt="">
+        </li>
+        <li>
+            <img src="./images/10.JPG" alt="">
+        </li>
+    </ul>
+</body>
+<script type="text/javascript">
+    window.onload = function () {
+        var is_li = document.getElementsByTagName("li");
+        for (let i = 0; i < is_li.length; i++) {
+            is_li[i].onmouseover = function () {
+                this.className = "open"
+            };
+            is_li[i].onmouseout = function () {
+                this.className = ""
+            }
+            
+        }
+    }
+</script>
+</html>
