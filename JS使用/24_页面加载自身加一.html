@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>页面加载自身加一</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="number">0</div>
+</body>
+<script type="text/javascript">
+    var num = document.getElementById("number");
+    var i = 0;
+    function set_num () {
+         num.innerHTML = ++i;
+         console.log(i);
+    }
+    setInterval(set_num,1000)
+    /*
+      setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式.
+      语法：
+      setInterval(code,millisec[,"lang"])
+      参数：
+      code： 必需。要调用的函数或要执行的代码串。
+      millisec	必须。周期性执行或调用 code 之间的时间间隔，以毫秒计
+    */
+</script> 
+</html>
