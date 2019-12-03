@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用js写一个随机生成指定字符串的方法</title>
+</head>
+<body>
+    <script>
+        function stringRandom(n) {
+            const fx = 'dhsdhksdsdhsfhkkfhsdfhkjsdhfksfkjsdhfjksdhf';
+            let fx_a = '';
+            for (let i = 0; i < n.length; i++) {
+                fx_a += fx.charAt(Math.round(Math.random() * fx.length))    
+            }
+            return fx_a
+            console.log(fx_a)
+        }
+    </script>
+</body>
+</html>
