@@ -1,3 +1,2 @@
-# README 
-## 1
-根据自己实际情况进行js基础学习
+## README
+### 就几个css JS的小demo
