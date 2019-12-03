@@ -1,2 +1,2 @@
 ## README
-### 就几个css JS的小demo
+### 几个css JS的小demo，巩固自己的学习。
